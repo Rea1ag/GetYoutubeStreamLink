@@ -29,6 +29,7 @@ namespace GetYoutubeThreads
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@ namespace GetYoutubeThreads
 			this.label2 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.button2 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
@@ -115,11 +117,27 @@ namespace GetYoutubeThreads
 			this.pictureBox2.TabIndex = 6;
 			this.pictureBox2.TabStop = false;
 			// 
+			// button2
+			// 
+			this.button2.BackColor = System.Drawing.Color.Tomato;
+			this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+			this.button2.FlatAppearance.BorderSize = 2;
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+			this.button2.Location = new System.Drawing.Point(284, 76);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(62, 28);
+			this.button2.TabIndex = 7;
+			this.button2.Text = "1080p";
+			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(451, 183);
+			this.Controls.Add(this.button2);
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.label2);
@@ -127,6 +145,7 @@ namespace GetYoutubeThreads
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.textBox2);
 			this.Controls.Add(this.textBox1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Getting YouTube stream link";
@@ -147,6 +166,7 @@ namespace GetYoutubeThreads
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.Button button2;
 	}
 }
 

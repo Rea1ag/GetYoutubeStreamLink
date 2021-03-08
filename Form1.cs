@@ -91,6 +91,7 @@ namespace GetYoutubeThreads
 				t.Start();                                              //GAVNO
 				label2.Visible = true;                                  //GAVNO
 			}
+			Clipboard.Clear();
 			Clipboard.SetText(textBox2.Text);
 			textBox2.SelectAll();
 		}
@@ -138,7 +139,7 @@ namespace GetYoutubeThreads
 					string OneTrashsubString = st.Substring(indexOffirststring, length);
 					_ThreadsubString = OneTrashsubString;
 
-					if (st.StartsWith("https://manifest.googlevideo.com/api/manifest/hls_playlist")  & _ThreadsubString == Thread)//& st.IndexOf(OnefirstString) == 139
+					if (st.StartsWith("https://manifest.googlevideo.com/api/manifest/hls_playlist")  && _ThreadsubString == Thread)//& st.IndexOf(OnefirstString) == 139
 					{
 						_AllLink = st;
 						File.WriteAllText("1080p.m3u8", _AllLink);
@@ -146,10 +147,7 @@ namespace GetYoutubeThreads
 						textBox2.ForeColor = SystemColors.WindowText;
 						textBox2.Enabled = true;
 						textBox2.SelectAll();
-						//break;
-
-						//А потом "https://manifest.googlevideo.com/api/manifest/hls_playlist" + _subString + "96" + TwosubString + возможно /index.m3u8.
-						// И заставить это работать перед скриптом по поиском 1080p, после отдать ссылку на вывод.
+						break;
 					}
 				}
 			}
